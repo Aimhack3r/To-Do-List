@@ -1,0 +1,60 @@
+<%- include("header")  -%> 
+<section class="vh-100 gradient-custom-2">
+        <div class="container py-4 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-xl-6">
+
+                    <div class="card mask-custom">
+                        <div class="card-body p-4">
+
+                            <div class="text-center pt-3 pb-2">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp"
+                                    alt="Check" width="60">
+                                <h1 class="my-4 text-white">Todo List</h1>
+                            </div>
+                            <div class="text-center  pb-3">
+                                <h2 class="my-2 text-white"><%=listtitle %> </h2>
+                            </div>
+
+                            <form action="/" class="d-flex justify-content-center align-items-center mb-4"
+                                method="post">
+                                <div class="form-outline ">
+                                    <input type="text" id="form3" name="newitem" autocomplete="off" />
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg ms-2" name="list" value="<%=listtitle%>">Add</button>
+                            </form>
+
+
+                            <table class="table text-white mb-4">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">What do you need to do today?</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+
+                                    <%    for(var i=0; i<newlistitems.length; i++){%>
+                                    <tr class="fw-normal">
+                                        <td>
+                                            <span class=""><input id="chk" type="checkbox" class="option-input radio" "></span> <span class="itemss ms-2"><%=newlistitems[i] %></span>
+                                        
+                                        </td>
+                                    </tr>
+                                    <% }%>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <footer>© 2022 aimhack3r</footer>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <%- include("footer")  -%> 
+
